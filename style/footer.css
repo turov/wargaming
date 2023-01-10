@@ -1,0 +1,21 @@
+.footer {
+    margin-top: auto;
+    border-top: 1px solid var(--color-yellow);
+}
+
+.footer__container {
+    padding: 24px 36px;
+}
+
+.footer__link {
+    text-decoration: none;
+    color: var(--color-orange);
+}
+
+.footer__heart {
+    color: var(--color-root);
+}
+
+.footer__code {
+    color: var(--color-purple);
+}

@@ -1,0 +1,13 @@
+:root {
+    --color-background: #282a36;
+    --color-line: rgba(68, 71, 90, 0.7);
+    --color-foreground: #f8f8f2;
+    --color-comment: #6272a4;
+    --color-cyan: #8be9fd;
+    --color-green: #50fa7b;
+    --color-orange: #ffb86c;
+    --color-pink: #ff79c6;
+    --color-purple: #bd93f9;
+    --color-root: #ff5555;
+    --color-yellow: #f1fa8c;
+}

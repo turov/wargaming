@@ -1,0 +1,25 @@
+.mistakes__list {
+    margin: 0 0 48px;;
+    padding: 0;
+    list-style: none;
+}
+
+.mistakes__item {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 8px;
+}
+
+.mistakes__tag {
+    color: var(--color-purple);
+}
+
+.mistakes__item::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 16px;
+    height: 1px;
+    background-color: var(--color-green);
+}

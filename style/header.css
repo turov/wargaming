@@ -1,0 +1,126 @@
+.header {
+    border-bottom: 1px solid var(--color-yellow);
+}
+
+.header__container {
+    padding: 16px 36px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__button-icon {
+    margin-left: auto;
+    position: relative;
+    background: unset;
+    border: unset;
+    display: none;
+    width: 26px;
+    height: 18px;
+}
+
+.header__button-icon::before,
+.header__button-icon::after {
+    position: absolute;
+    content: '';
+    width: 26px;
+    height: 1px;
+    background-color: var(--color-yellow);
+    transition: all 0.4s;
+}
+
+.header__button-icon::before {
+    top: 0;
+    left: 0;
+}
+
+.header__button-icon::after {
+    top: 18px;
+    left: 0;
+}
+
+.header__button:checked + .header__button-icon::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+}
+
+.header__button:checked + .header__button-icon::after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%) rotate(-45deg);
+}
+
+.header__navigation-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header__navigation-link {
+    position: relative;
+    text-decoration: none;
+    color: var(--color-yellow);
+    padding: 16px;
+}
+
+.header__navigation-link::before,
+.header__navigation-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-yellow);
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.header__navigation-link:not(.header__navigation-link--active):hover::before,
+.header__navigation-link:not(.header__navigation-link--active):focus::before,
+.header__navigation-link:not(.header__navigation-link--active):hover::after,
+.header__navigation-link:not(.header__navigation-link--active):focus::after {
+    width: 100%;
+}
+
+.header__navigation-link--active {
+    color: var(--color-root);
+}
+
+@media screen and (max-width: 1000px) {
+    .header__button-icon {
+        display: block;
+    }
+
+    .header__navigation {
+        display: block;
+        position: absolute;
+        top: 82px;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background-color: var(--color-background);
+        transition: left 0.4s ease;
+    }
+
+    .header__button:checked ~ .header__navigation {
+        left: 0;
+    }
+
+    .header__navigation-list {
+        flex-direction: column;
+    }
+
+    .header__navigation-item {
+        width: 100%;
+        font-size: 24px;
+        padding: 8px 36px;
+        border-bottom: 1px solid var(--color-yellow);
+    }
+}

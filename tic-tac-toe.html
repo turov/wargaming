@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wargaming Test Task</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/index.css">
+</head>
+<body class="page">
+<header class="header">
+    <div class="container header__container">
+        <a href="https://wargaming.net" target="_blank" class="header__logo-link">
+            <img src="assets/logo.svg" alt="Wargaming.net" width="200"
+                 height="44">
+        </a>
+        <input class="header__button visually-hidden" type="checkbox" id="toggle__button">
+        <label class="header__button-icon" for="toggle__button"><span class="visually-hidden">Open/Close</span></label>
+        <nav class="header__navigation">
+            <ul class="header__navigation-list">
+                <li class="header__navigation-item"><a class="header__navigation-link"
+                                                       href="index.html">Exercise&nbsp;1</a>
+                </li>
+                <li class="header__navigation-item"><a class="header__navigation-link" href="game-updates.html">Exercise&nbsp;2</a>
+                </li>
+                <li class="header__navigation-item"><a class="header__navigation-link" href="about-the-game.html">Exercise&nbsp;3</a>
+                </li>
+                <li class="header__navigation-item"><a class="header__navigation-link" href="game-education.html">Exercise&nbsp;4</a>
+                </li>
+                <li class="header__navigation-item"><a class="header__navigation-link header__navigation-link--active">Exercise&nbsp;5</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="container game">
+    <h1 class="game__title title tittle--h1">Tic Tac Toe</h1>
+    <div class="game_container">
+        <button type="button" data-cell="0" class="cell"></button>
+        <button type="button" data-cell="1" class="cell"></button>
+        <button type="button" data-cell="2" class="cell"></button>
+        <button type="button" data-cell="3" class="cell"></button>
+        <button type="button" data-cell="4" class="cell"></button>
+        <button type="button" data-cell="5" class="cell"></button>
+        <button type="button" data-cell="6" class="cell"></button>
+        <button type="button" data-cell="7" class="cell"></button>
+        <button type="button" data-cell="8" class="cell"></button>
+    </div>
+    <p class="game__results"></p>
+    <button class="game__restart-button" type="button" onclick="restartGame()">Restart Game</button>
+</div>
+
+<footer class="footer">
+    <div class="container footer__container"><span class="footer__code">&lt;/&gt;</span> with <span
+            class="footer__heart">&hearts;</span> by <a class="footer__link" href="https://github.com/turov"
+                                                        target="_blank">Turov</a></div>
+</footer>
+
+<script src="scripts/game.js"></script>
+</body>
+</html>

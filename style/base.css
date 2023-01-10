@@ -1,0 +1,58 @@
+.page {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: 'Anonymous Pro', monospace, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.page *,
+.page *::before,
+.page *::after {
+    box-sizing: inherit;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.title {
+    margin: 0;
+    font-weight: 700;
+}
+
+.tittle--h1 {
+    font-size: 42px;
+    margin: 24px 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1920px;
+    padding: 0 36px;
+    margin: 0 auto;
+}
+
+.link {
+    color: var(--color-cyan);
+}
+
+.disable {
+    pointer-events: none;
+    cursor: not-allowed;
+}

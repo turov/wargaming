@@ -1,2 +1,1 @@
-# wargaming
-Test Task
+# Wargaming Test Task ⚓️
